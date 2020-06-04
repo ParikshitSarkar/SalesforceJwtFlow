@@ -21,9 +21,9 @@ public class JwtTokenGenerator {
 
             //Create the JWT Claims Object
             String[] claimArray = new String[4];
-            claimArray[0] = "3MVG9FxR3Tq3eZN_acTBt32b5XbHCskLR0aMuvkqIbhQL7QKl9jNbjs2XXZYvwtbL8goTwjochumwzXdrjS7P";
-            claimArray[1] = "sarkarp@cadence.com.sarkarp";
-            claimArray[2] = "https://test.salesforce.com";
+            claimArray[0] = ""; //Enter client id/consumer key generated from Connected App
+            claimArray[1] = ""; //Enter your SF username
+            claimArray[2] = "https://test.salesforce.com"; //For production enter : https://login.salesforce.com
             claimArray[3] = Long.toString( ( System.currentTimeMillis()/1000 ) + 1000);
 
             MessageFormat claims = new MessageFormat(claimTemplate);
