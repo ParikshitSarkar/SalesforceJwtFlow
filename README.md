@@ -35,7 +35,7 @@ iv)  Convert pem to crt using openssl
 
 openssl x509 -outform der -in my_key_store.pem -out key_store_cert.crt
 
-2) Upload key_store_cert.crt to SF connected app
+2) Upload key_store_cert.crt to SF connected app (Refer to jwtconnapp1.png AND Inkedjwtconnapp1_LI.jpg)
 
 3) Assign the connected app to the particular user profiles as needed 
 
