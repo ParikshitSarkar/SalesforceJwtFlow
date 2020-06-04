@@ -10,7 +10,7 @@ i) Generate jks file
 
 keytool -genkey -keyalg RSA -alias selfsigned -keystore key.jks -storepass password -validity 360 -keysize 1024
 
-Note keystore pwd and alias : 
+Make a Note of keystore pwd and alias : 
 
 keystore password = password 
 
@@ -39,9 +39,12 @@ openssl x509 -outform der -in my_key_store.pem -out key_store_cert.crt
 
 3) Assign the connected app to the particular user profiles as needed 
 
-4) Generate the JWT token using java program (Ref: https://help.salesforce.com/articleView?id=remoteaccess_oauth_jwt_flow.htm&type=5)
+4) Generate the JWT token using java program (Enter the appropriate parameters in JwtTokenGenerator.java program to generate token).
 
 5) Run the following command with CURL
 
 curl --data "grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion=Your_JWT_Token" --header "Content-Type: application/x-www-form-urlencoded" --request POST https://[Your_SF_Domain].my.salesforce.com/services/oauth2/token
 
+
+***Note - 
+All original references were taken from https://help.salesforce.com/articleView?id=remoteaccess_oauth_jwt_flow.htm&type=5
