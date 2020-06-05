@@ -14,7 +14,11 @@ Make a Note of keystore pwd and alias :
 
 keystore password = password 
 
-alias = certalias 
+alias = selfsigned (in our case it is = certalias ) 
+
+***Note 
+
+While entering the firstname and lastname, please enter your SF domain name. This is very important as it is the entry-point for your Org. 
 
 
 ii) Convert jks to pkcs12 using keytool
